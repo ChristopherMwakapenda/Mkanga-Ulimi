@@ -1,46 +1,21 @@
-const menu = document.querySelector(".menu-icon");
+// MKANGA-ULIMI MOBILE MENU
+
+
+const menuIcon = document.querySelector(".menu-icon");
 
 const navbar = document.querySelector("#navbar");
 
 
-if(menu){
+if(menuIcon && navbar){
 
-menu.onclick = () => {
+
+menuIcon.addEventListener("click",()=>{
+
 
 navbar.classList.toggle("active");
 
-}
-
-}
-
-
-
-
-// SCROLL REVEAL
-
-
-const sections = document.querySelectorAll("section");
-
-
-window.addEventListener("scroll",()=>{
-
-
-sections.forEach(section=>{
-
-
-const position = section.getBoundingClientRect().top;
-
-
-if(position < window.innerHeight - 100){
-
-
-section.classList.add("show");
-
-
-}
-
 
 });
 
 
-});
+}

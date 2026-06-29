@@ -1,5 +1,6 @@
-document.getElementById("orderForm")
-.addEventListener("submit", function(e){
+document
+.getElementById("orderForm")
+.addEventListener("submit",function(e){
 
 
 e.preventDefault();
@@ -29,25 +30,34 @@ document.getElementById("location").value;
 
 
 let message =
-"Hello Mkanga-Ulimi Farm,%0A%0A" +
 
-"I want to order: " + product +
+`Hello Mkanga-Ulimi Farm 🌱
 
-"%0AQuantity: " + quantity +
+I would like to order:
 
-"%0AName: " + name +
+Product: ${product}
 
-"%0APhone: " + phone +
+Quantity: ${quantity}
 
-"%0ADelivery Location: " + location;
+Customer: ${name}
+
+Phone: ${phone}
+
+Location: ${location}`;
 
 
 
-window.open(
 
-"https://wa.me/265XXXXXXXXX?text=" + message
+let whatsapp =
 
-);
+"https://wa.me/265999826757?text="
+
++ encodeURIComponent(message);
+
+
+
+window.open(whatsapp,"_blank");
+
 
 
 });

@@ -1,7 +1,79 @@
-/* MOBILE RESPONSIVE DESIGN */
+/* =================================
+   MKANGA-ULIMI FARM
+   RESPONSIVE DESIGN
+================================= */
 
 
-@media(max-width:768px){
+
+@media(max-width:900px){
+
+
+
+/* HEADER */
+
+
+header{
+
+padding:15px 5%;
+
+}
+
+
+
+nav{
+
+gap:15px;
+
+}
+
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+
+.cards,
+.product-grid,
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.gallery-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
 
 
 
@@ -12,16 +84,7 @@ header{
 
 flex-direction:row;
 
-padding:15px 20px;
-
-}
-
-
-
-
-.logo-area h2{
-
-font-size:20px;
+justify-content:space-between;
 
 }
 
@@ -37,6 +100,12 @@ height:50px;
 
 
 
+.logo-area h2{
+
+font-size:18px;
+
+}
+
 
 
 
@@ -48,7 +117,10 @@ height:50px;
 
 display:block;
 
+color:#2e7d32;
+
 }
+
 
 
 
@@ -70,7 +142,7 @@ flex-direction:column;
 
 padding:20px;
 
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 
 }
 
@@ -88,10 +160,9 @@ nav a{
 
 padding:12px;
 
+border-bottom:1px solid #eee;
+
 }
-
-
-
 
 
 
@@ -102,39 +173,33 @@ padding:12px;
 
 .hero{
 
-height:400px;
+height:75vh;
 
 }
 
 
 
-.hero-overlay h1{
+.hero h1{
 
-font-size:30px;
-
-}
-
-
-
-.hero-overlay p{
-
-font-size:16px;
+font-size:32px;
 
 }
 
 
 
+.hero p{
 
+font-size:17px;
 
+}
 
-/* BUTTONS */
 
 
 button{
 
 width:90%;
 
-margin:5px;
+margin:8px;
 
 }
 
@@ -142,16 +207,37 @@ margin:5px;
 
 
 
+/* SECTIONS */
 
 
-/* PRODUCTS */
+section{
+
+padding:45px 5%;
+
+}
 
 
-.product-grid{
+
+section h2{
+
+font-size:28px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+
+.cards,
+.product-grid,
+.services-grid{
+
 
 grid-template-columns:1fr;
 
-padding:20px;
 
 }
 
@@ -159,7 +245,9 @@ padding:20px;
 
 .product-card img{
 
+
 height:220px;
+
 
 }
 
@@ -168,19 +256,25 @@ height:220px;
 
 
 
+/* ABOUT */
 
-/* SERVICES */
 
-
-.services-grid{
+.about-container{
 
 grid-template-columns:1fr;
 
-padding:20px;
+text-align:center;
 
 }
 
 
+
+
+.about-text{
+
+text-align:center;
+
+}
 
 
 
@@ -189,39 +283,21 @@ padding:20px;
 /* GALLERY */
 
 
-.farm-gallery{
+.gallery-grid{
+
 
 grid-template-columns:1fr;
 
-padding:20px;
 
 }
 
 
 
+.gallery-grid img{
 
-
-
-
-/* CONTACT */
-
-
-.contact-main{
-
-grid-template-columns:1fr;
-
-padding:20px;
+height:230px;
 
 }
-
-
-
-.contact-section{
-
-padding:20px;
-
-}
-
 
 
 
@@ -230,22 +306,40 @@ padding:20px;
 /* FOOTER */
 
 
-.footer-container{
+footer{
 
-flex-direction:column;
-
-text-align:center;
+padding:35px 5%;
 
 }
 
 
 
-.social-icons{
+.social-icons a{
 
-justify-content:center;
+font-size:22px;
 
 }
 
+
+
+
+
+/* WHATSAPP */
+
+
+.floating-whatsapp{
+
+width:55px;
+
+height:55px;
+
+right:15px;
+
+bottom:15px;
+
+font-size:26px;
+
+}
 
 
 

@@ -3,39 +3,101 @@
 
 <head>
 
-<meta name="description" content="Mkanga-Ulimi Farm provides quality agricultural products, farming services and fresh produce in Malawi.">
+    <meta property="og:title" content="Mkanga-Ulimi Farm">
 
-<meta name="keywords" content="farm Malawi, agriculture, crops, livestock, fresh produce">
+<meta property="og:description" content="Quality crops, livestock and agricultural solutions in Malawi.">
 
-<meta name="author" content="Mkanga-Ulimi Farm">
+<meta property="og:image" content="https://christophermwakapenda.github.io/Mkanga-Ulimi/assets/images/logo.png">
 
+<meta property="og:type" content="website">
+
+    <meta property="og:title" content="Mkanga-Ulimi Farm">
+
+<meta property="og:description" content="Quality crops, livestock and agricultural solutions in Malawi.">
+
+<meta property="og:image" content="assets/images/logo.png">
+
+<meta property="og:type" content="website">
 
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<title>Farm Gallery | Mkanga-Ulimi Farm</title>
+<title>Gallery | Mkanga-Ulimi Farm</title>
+
 
 <meta name="description"
-content="View photos of Mkanga-Ulimi Farm crops, livestock and agricultural activities.">
+content="View photos of Mkanga-Ulimi Farm activities, crops, livestock and agricultural projects.">
+
 
 <link rel="icon" href="assets/images/logo.png">
 
 
 <link rel="stylesheet" href="assets/css/style.css">
 
+<link rel="stylesheet" href="assets/css/responsive.css">
+
 <link rel="stylesheet" href="assets/css/animations.css">
 
-<link rel="stylesheet" href="assets/css/responsive.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+
 </head>
 
+<div class="lightbox" id="lightbox">
+
+<span class="close">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+let galleryImages = document.querySelectorAll(".gallery-img");
+
+let lightbox = document.getElementById("lightbox");
+
+let lightboxImage = document.getElementById("lightbox-img");
+
+
+
+galleryImages.forEach(img => {
+
+
+img.addEventListener("click", function(){
+
+
+lightbox.style.display = "flex";
+
+
+lightboxImage.src = this.src;
+
+
+});
+
+
+});
+
+
+
+document.querySelector(".close").onclick = function(){
+
+
+lightbox.style.display = "none";
+
+
+};
+
+
+</script>
 
 <body>
+
+
 
 
 
@@ -44,39 +106,79 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="logo-area">
 
-<a href="index.html">
-<img 
-src="assets/images/gallery1.jpg"
-width="400"
-height="300"
-alt="Mkanga-Ulimi Farm Gallery"></a>
 
-<h2>Mkanga-Ulimi</h2>
+<a href="index.html">
+
+<img class="gallery-img" src="assets/images/logo.png"
+alt="Mkanga-Ulimi Farm Logo">
+
+</a>
+
+
+<h2>
+
+Mkanga-Ulimi
+
+</h2>
+
 
 </div>
 
 
 
 
-<nav>
+
+<div class="menu-icon">
+
+☰
+
+</div>
 
 
-<a href="order.html">Order</a>
 
-<a href="index.html">Home</a>
 
-<a href="about.html">About</a>
 
-<a href="products.html">Products</a>
 
-<a href="services.html">Services</a>
+<nav id="navbar">
 
-<a href="gallery.html">Gallery</a>
 
-<a href="contact.html">Contact</a>
+<a href="index.html">
+Home
+</a>
+
+
+<a href="about.html">
+About
+</a>
+
+
+<a href="products.html">
+Products
+</a>
+
+
+<a href="services.html">
+Services
+</a>
+
+
+<a href="gallery.html">
+Gallery
+</a>
+
+
+<a href="contact.html">
+Contact
+</a>
+
+
+<a href="order.html">
+Order
+</a>
 
 
 </nav>
+
 
 
 </header>
@@ -85,28 +187,24 @@ alt="Mkanga-Ulimi Farm Gallery"></a>
 
 
 
-<a class="floating-whatsapp"
-href="https://wa.me/265999826757"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
 
 
 
 
+<section class="why-us">
 
 
+<h1>
 
-<section class="page-title">
+Farm Gallery
 
-
-<h1>Farm Gallery</h1>
+</h1>
 
 
 <p>
-Photos from Mkanga-Ulimi Farm
+
+A look into our farming journey, crops, livestock and activities.
+
 </p>
 
 
@@ -118,97 +216,273 @@ Photos from Mkanga-Ulimi Farm
 
 
 
-<section class="gallery-grid">
+
+
+<section>
+
+
+<h2>
+
+Our Farm Moments
+
+</h2>
 
 
 
-<img src="assets/images/gallery1.jpg">
-
-<img src="assets/images/gallery2.jpg">
-
-<img src="assets/images/gallery3.jpg">
-
-<img src="assets/images/gallery4.jpg">
-
-<img src="assets/images/gallery5.jpg">
-
-<img src="assets/images/gallery6.jpg">
 
 
-<img src="assets/images/1.jpg">
+<div class="gallery-grid">
 
-<img src="assets/images/2.jpg">
 
-<img src="assets/images/3.jpg">
 
-<img src="assets/images/4.jpg">
+<img class="gallery-img" src="assets/images/gallery1.jpg"
+alt="Farm activity">
 
-<img src="assets/images/5.jpg">
 
-<img src="assets/images/6.jpg">
+<img class="gallery-img" src="assets/images/gallery2.jpg"
+alt="Farm crops">
 
-<img src="assets/images/7.jpg">
 
-<img src="assets/images/8.jpg">
+<img class="gallery-img" src="assets/images/gallery3.jpg"
+alt="Agriculture">
 
-<img src="assets/images/9.jpg">
 
-<img src="assets/images/10.jpg">
+<img class="gallery-img" src="assets/images/gallery4.jpg"
+alt="Livestock">
 
-<img src="assets/images/11.jpg">
 
-<img src="assets/images/12.jpg">
+<img class="gallery-img" src="assets/images/gallery5.jpg"
+alt="Farm work">
 
-<img src="assets/images/13.jpg">
 
-<img src="assets/images/14.jpg">
+<img class="gallery-img" src="assets/images/gallery6.jpg"
+alt="Harvest">
 
-<img src="assets/images/15.jpg">
 
-<img src="assets/images/16.jpg">
 
-<img src="assets/images/17.jpg">
+<img class="gallery-img" src="assets/images/1.jpg"
+alt="Farm photo">
 
-<img src="assets/images/18.jpg">
 
-<img src="assets/images/19.jpg">
-<img src="assets/images/20.jpg">
-<img src="assets/images/21.jpg">
-<img src="assets/images/22.jpg">
-<img src="assets/images/23.jpg">
-<img src="assets/images/24.jpg">
-<img src="assets/images/25.jpg">
-<img src="assets/images/26.jpg">
-<img src="assets/images/27.jpg">
-<img src="assets/images/28.jpg">
-<img src="assets/images/29.jpg">
-<img src="assets/images/30.jpg">
-<img src="assets/images/31.jpg">
-<img src="assets/images/32.jpg">
-<img src="assets/images/33.jpg">
-<img src="assets/images/34.jpg">
-<img src="assets/images/35.jpg">
-<img src="assets/images/36.jpg">
-<img src="assets/images/37.jpg">
-<img src="assets/images/38.jpg">
-<img src="assets/images/39.jpg">
-<img src="assets/images/40.jpg">
-<img src="assets/images/41.jpg">
-<img src="assets/images/42.jpg">
-<img src="assets/images/43.jpg">
-<img src="assets/images/44.jpg">
-<img src="assets/images/45.jpg">
-<img src="assets/images/46.jpg">
-<img src="assets/images/47.jpg">
-<img src="assets/images/48.jpg">
-<img src="assets/images/49.jpg">
-<img src="assets/images/50.jpg">
-<img src="assets/images/51.jpg">
-<img src="assets/images/52.jpg"
-<img src="assets/images/logo.png">
+<img class="gallery-img" src="assets/images/2.jpg"
+alt="Farm photo">
+
+
+<img class="gallery-img" src="assets/images/3.jpg"
+alt="Farm photo">
+
+
+<img class="gallery-img" src="assets/images/4.jpg"
+alt="Farm photo">
+
+
+<img class="gallery-img" src="assets/images/5.jpg"
+alt="Farm photo">
+
+
+<img class="gallery-img" src="assets/images/6.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/7.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/8.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/9.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/10.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/11.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/12.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/13.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/14.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/15.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/16.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/17.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/18.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/19.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/20.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/21.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/22.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/23.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/24.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/25.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/26.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/27.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/28.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/29.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/30.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/31.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/32.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/33.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/34.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/35.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/6.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/37.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/38.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/39.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/49.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/41.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/42.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/43.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/44.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/45.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/46.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/47.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/48.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/49.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/50.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/51.jpg"
+alt="Farm photo">
+
+<img class="gallery-img" src="assets/images/52.jpg"
+alt="Farm photo">
+
+
+
+
+
+
+</div>
+
 
 
 </section>
+
+
+
+
+
+
+
+
+
+<section class="why-us">
+
+
+<h2>
+
+Growing Together
+
+</h2>
+
+
+<p>
+
+
+We continue learning, farming and inspiring others to become part of
+the agricultural future.
+
+
+</p>
+
+
+
+<br>
+
+
+
+<a href="contact.html">
+
+<button>
+
+Visit Our Farm
+
+</button>
+
+
+</a>
+
+
+
+</section>
+
+
+
+
 
 
 
@@ -217,36 +491,71 @@ Photos from Mkanga-Ulimi Farm
 
 <footer>
 
+
+
+<h3>
+
+Mkanga-Ulimi Farm
+
+</h3>
+
+
+
+<p>
+
+Quality farming for a better tomorrow.
+
+</p>
+
+
+
+
 <div class="social-icons">
 
 
-<a href="https://www.facebook.com/MkangaUlimi" target="_blank">
-<i class="fab fa-facebook-f"></i>
+<a href="https://facebook.com/mkangaulimi">
+
+<i class="fab fa-facebook"></i>
+
 </a>
 
 
-<a href="https://www.instagram.com/YourUsername" target="_blank">
+<a href="#">
+
 <i class="fab fa-instagram"></i>
+
 </a>
 
 
-<a href="https://wa.me/265999826757" target="_blank">
+
+<a href="https://wa.me/265999826757">
+
 <i class="fab fa-whatsapp"></i>
+
 </a>
+
 
 
 <a href="mailto:mkangafarm2020@gmail.com">
-<i class="fas fa-envelope"></i>
+
+<i class="fa fa-envelope"></i>
+
 </a>
 
 
+
 </div>
+
+
+
+
 
 <p>
 
 © 2026 Mkanga-Ulimi Farm
 
 </p>
+
 
 
 </footer>
@@ -256,7 +565,26 @@ Photos from Mkanga-Ulimi Farm
 
 
 
-<script src="assets/js/gallery.js"></script>
+
+
+
+<a class="floating-whatsapp"
+
+href="https://wa.me/265999826757"
+
+target="_blank">
+
+
+<i class="fab fa-whatsapp"></i>
+
+
+</a>
+
+
+
+
+
+
 
 <script src="assets/js/main.js"></script>
 
