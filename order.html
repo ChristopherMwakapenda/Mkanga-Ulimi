@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop fresh farm products from Mkanga-Ulimi Farm. Browse livestock, poultry, horticultural products and honey available for sale.">
+  <title>Market | Mkanga-Ulimi Farm</title>
+  <link rel="icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    .market-hero{min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("assets/images/hero.jpg") center/cover no-repeat}
+    .market-hero-content{max-width:800px;color:#fff}.market-hero-content .small-title{font-size:14px;letter-spacing:3px;font-weight:700;margin-bottom:15px}.market-hero-content h1{font-size:clamp(40px,7vw,72px);margin:0 0 20px}.market-hero-content p{font-size:18px;line-height:1.7;margin:0 auto}
+    .market-section{padding:80px 5%}.market-heading{text-align:center;max-width:750px;margin:0 auto 45px}.market-heading .section-label{font-size:13px;letter-spacing:3px;font-weight:700}.market-heading h2{font-size:40px;margin:10px 0 15px}.market-heading p{line-height:1.7}
+    .market-controls{max-width:1200px;margin:0 auto 40px;display:flex;gap:15px;flex-wrap:wrap;justify-content:space-between;align-items:center}.market-search{flex:1;min-width:250px;position:relative}.market-search i{position:absolute;left:18px;top:50%;transform:translateY(-50%)}.market-search input{width:100%;padding:15px 20px 15px 50px;border:1px solid #ddd;border-radius:8px;font-size:15px;outline:none;box-sizing:border-box}
+    .category-filters{display:flex;gap:8px;flex-wrap:wrap}.category-btn{border:1px solid #ddd;background:#fff;padding:12px 18px;border-radius:8px;cursor:pointer;font-weight:600;transition:.3s}.category-btn:hover,.category-btn.active{background:#222;color:#fff;border-color:#222}
+    .market-products{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.market-product-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;transition:transform .3s,box-shadow .3s}.market-product-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.1)}
+    .product-image{height:220px;position:relative;overflow:hidden;background:#f2f2f2}.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.market-product-card:hover .product-image img{transform:scale(1.06)}
+    .availability{position:absolute;top:15px;left:15px;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#fff}.availability.in-stock{color:#237a3b}.availability.out-of-stock{color:#c62828}
+    .product-details{padding:20px}.product-category{font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700;opacity:.6}.product-details h3{margin:8px 0;font-size:20px}.product-description{font-size:14px;line-height:1.6;opacity:.75;min-height:45px}.product-price{font-size:20px;font-weight:700;margin:15px 0}.product-actions{display:flex;gap:10px}
+    .quantity-control{display:flex;align-items:center;border:1px solid #ddd;border-radius:6px;overflow:hidden}.quantity-control button{border:none;background:#f5f5f5;width:32px;height:40px;cursor:pointer;font-weight:700}.quantity-control span{width:30px;text-align:center;font-weight:600}
+    .add-cart-btn{flex:1;border:none;border-radius:6px;background:#222;color:#fff;cursor:pointer;font-weight:600;transition:.3s}.add-cart-btn:hover{opacity:.85}.add-cart-btn:disabled{background:#aaa;cursor:not-allowed}
+    .no-products{display:none;text-align:center;padding:60px 20px;grid-column:1/-1}
+    .cart-button{position:fixed;right:25px;bottom:25px;width:60px;height:60px;border-radius:50%;border:none;background:#222;color:#fff;cursor:pointer;z-index:1000;font-size:22px;box-shadow:0 8px 25px rgba(0,0,0,.25)}.cart-count{position:absolute;top:-5px;right:-5px;background:#d62828;color:#fff;width:22px;height:22px;border-radius:50%;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;display:none}.cart-overlay.active{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:#fff;padding:30px;box-sizing:border-box;overflow-y:auto}.cart-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding-bottom:20px}.cart-header h2{margin:0}.close-cart{border:none;background:none;font-size:25px;cursor:pointer}.cart-items{margin:25px 0}.cart-item{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #eee;padding:15px 0}.cart-item h4{margin:0 0 5px}.cart-item p{margin:0;font-size:13px}.remove-item{border:none;background:none;color:#c62828;cursor:pointer}.cart-total{display:flex;justify-content:space-between;font-size:20px;font-weight:700;padding:20px 0}.checkout-btn{width:100%;padding:16px;border:none;border-radius:7px;background:#25d366;color:#fff;font-size:16px;font-weight:700;cursor:pointer}.empty-cart{text-align:center;padding:50px 20px;opacity:.7}
+    .market-cta{text-align:center;padding:70px 20px}.market-cta h2{font-size:35px;margin-bottom:15px}.market-cta a{display:inline-block;margin-top:20px;padding:15px 25px;border-radius:7px;text-decoration:none;font-weight:700;background:#25d366;color:#fff}
+    @media(max-width:1000px){.market-products{grid-template-columns:repeat(3,1fr)}}@media(max-width:750px){.market-products{grid-template-columns:repeat(2,1fr)}.market-controls{flex-direction:column;align-items:stretch}.category-filters{overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}}@media(max-width:500px){.market-products{grid-template-columns:1fr}.market-heading h2{font-size:30px}.market-section{padding:60px 20px}}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="logo-area"><a href="index.html"><img src="assets/images/logo.png" alt="Mkanga-Ulimi Farm Logo"></a></div>
+  <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></a>
+      <div class="dropdown-content">
+        <a href="livestock.html">Livestock</a>
+        <a href="poultry.html">Poultry</a>
+        <a href="horticulture.html">Horticulture</a>
+        <a href="apiculture.html">Apiculture</a>
+        <a href="advisory-services.html">Advisory Services</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html">Market</a>
+  </nav>
+</header>
+
+<section class="market-hero">
+  <div class="market-hero-content">
+    <p class="small-title">MKANGA-ULIMI FARM MARKET</p>
+    <h1>Fresh From Our Farm</h1>
+    <p>Browse our available farm products, select what you need, add it to your cart and place your order directly with Mkanga-Ulimi Farm.</p>
+  </div>
+</section>
+
+<section class="market-section">
+  <div class="market-heading">
+    <p class="section-label">SHOP OUR FARM</p>
+    <h2>Available Products</h2>
+    <p>Explore products currently available from Mkanga-Ulimi Farm. Availability and prices may change depending on farm stock.</p>
+  </div>
+
+  <div class="market-controls">
+    <div class="market-search">
+      <i class="fa-solid fa-search"></i>
+      <input type="text" id="productSearch" placeholder="Search products...">
+    </div>
+    <div class="category-filters" id="categoryFilters"></div>
+  </div>
+
+  <div class="market-products" id="productGrid"></div>
+
+  <div class="no-products" id="noProducts">
+    <i class="fa-solid fa-box-open fa-2x"></i>
+    <h3>No products found</h3>
+    <p>Try searching for another product or category.</p>
+  </div>
+</section>
+
+<section class="market-cta">
+  <h2>Can't Find What You're Looking For?</h2>
+  <p>Contact Mkanga-Ulimi Farm directly and we'll help you find the right product.</p>
+  <a href="https://wa.me/265999826757" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Chat With Us on WhatsApp
+  </a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column footer-brand">
+      <img src="assets/images/logo.png" alt="Mkanga-Ulimi Farm Logo" class="footer-logo">
+      <h3>Mkanga-Ulimi Farm</h3>
+      <p>Sustainable farming for a healthier today and a better tomorrow.</p>
+      <p class="footer-description">A contemporary Malawian-owned agricultural enterprise committed to sustainable farming, quality products and agricultural innovation.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="market.html">Marketplace</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Enterprises</h4>
+      <ul class="footer-links">
+        <li><a href="livestock.html">Livestock</a></li>
+        <li><a href="poultry.html">Poultry</a></li>
+        <li><a href="apiculture.html">Apiculture</a></li>
+        <li><a href="orchard.html">Orchard</a></li>
+        <li><a href="horticulture.html">Horticulture</a></li>
+        <li><a href="advisory-services.html">Advisory Services</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h4>Connect With Us</h4>
+      <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:mkangafarm2020@gmail.com">mkangafarm2020@gmail.com</a></p>
+      <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/265999826757" target="_blank" rel="noopener">+265 999 826 757</a></p>
+      <div class="social-icons" aria-label="Social media links">
+        <a href="https://facebook.com/mkangaulimi" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/265999826757" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="mailto:mkangafarm2020@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Mkanga-Ulimi Farm. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button class="cart-button" onclick="openCart()" aria-label="Open shopping cart">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" onclick="closeCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart"><i class="fa-solid fa-cart-shopping fa-2x"></i><p>Your cart is empty.</p></div>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">Price on Enquiry</span>
+    </div>
+    <button class="checkout-btn" onclick="checkoutWhatsApp()">
+      <i class="fab fa-whatsapp"></i> Order via WhatsApp
+    </button>
+  </div>
+</div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/market.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

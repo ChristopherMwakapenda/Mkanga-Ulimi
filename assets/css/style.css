@@ -1,0 +1,3595 @@
+/* =========================MKANGA-ULIMI FARMVERSION 2.0 STYLE========================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* =================================MKANGA-ULIMI BRAND COLORS================================= */
+:root{
+    --primary:#111111;
+    --secondary:#C89A67;
+    --gold:#D6A566;
+    --white:#FFFFFF;
+    --cream:#F8F6F2;
+    --soft:#F2ECE5;
+    --dark:#2D2D2D;
+    --grey:#666666;
+    --green:#667A3E;
+    --border:#E8DED1;
+    --shadow:rgba(0,0,0,.08);
+    --transition:.35s ease;
+}
+/* =================================GLOBAL COLORS================================= */
+body{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:#F2ECE5;      /* Soft Mkanga gold */
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body::before{
+
+content:"MKANGA ULIMI";
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%) rotate(-18deg);
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:220px;
+
+font-weight:700;
+
+letter-spacing:18px;
+
+color:#C89A67;
+
+opacity:.025;
+
+pointer-events:none;
+
+white-space:nowrap;
+
+z-index:-2;
+
+}
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle at 25% 20%,rgba(200,154,103,.06),transparent 32%),
+
+radial-gradient(circle at 80% 70%,rgba(214,165,102,.05),transparent 30%),
+
+radial-gradient(circle at 15% 80%,rgba(0,0,0,.02),transparent 25%);
+
+pointer-events:none;
+
+z-index:-3;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+font-family:"Cormorant Garamond",serif;
+
+color:var(--heading);
+
+font-weight:700;
+
+letter-spacing:.5px;
+
+}
+/* =================================HEADER================================= */
+header{
+	background:var(--white)
+}
+.logo-area h2{
+	color:var(--dark-green)
+}
+nav a{
+	color:var(--dark-text)
+}
+nav a:hover{
+	color:var(--farm-green)
+}
+nav a.active{
+	color:var(--farm-green);
+	border-bottom:3px solid var(--farm-gold)
+}
+/* =================================BUTTONS================================= */
+button,.btn-primary{
+	background:#111111;
+
+color:#fff;
+
+border:2px solid #111111;
+
+transition:.35s ease;
+}
+button:hover,.btn-primary:hover{
+	background:var(--dark-green)
+}
+.btn-outline{
+	border:2px solid white;
+	color:white
+}
+.btn-outline:hover{
+	background:var(--farm-gold);
+	color:var(--dark-text)
+}
+/* =================================HERO================================= */
+.hero-content span{
+	color:var(--soft-gold)
+}
+.hero-buttons .btn-primary{
+	background:var(--farm-green)
+}
+.hero-buttons .btn-outline:hover{
+	background:var(--farm-gold)
+}
+/* =================================SECTIONS================================= */
+section h2{
+	color:var(--dark-green)
+}
+/* =================================CARDS================================= */
+.service-card,.product-card{
+	background:white;
+	border-top:5px solid var(--farm-green)
+}
+.service-card:hover,.product-card:hover{
+	box-shadow:0 15px 35px rgba(46,125,50,.25)
+}
+.service-card i,.product-card i{
+	color:var(--farm-green)
+}
+.service-card h3,.product-card h3{
+	color:var(--dark-green)
+}
+/* =================================SERVICE SLIDER================================= */
+.service-dot.active{
+	background:var(--farm-green)
+}
+.service-prev:hover,.service-next:hover{
+	background:var(--farm-green)
+}
+/* =================================ABOUT PAGE================================= */
+.about-text h1,.founder-text h1{
+	color:var(--dark-green)
+}
+.quote{
+	background:var(--cream);
+	border-left:5px solid var(--farm-gold)
+}
+/* =================================WHY US================================= */
+.why-us{
+	background:var(--cream)
+}
+.why-us h2{
+	color:var(--dark-green)
+}
+/* =================================GALLERY================================= */
+.gallery-grid img:hover{
+	box-shadow:0 10px 25px rgba(46,125,50,.3)
+}
+/* =================================FOOTER================================= */
+footer{
+	background:var(--dark-green);
+	color:white
+}
+footer h3{
+	color:white
+}
+.social-icons a{
+	color:white
+}
+.social-icons a:hover{
+	color:var(--soft-gold)
+}
+/* =================================WHATSAPP================================= */
+.floating-whatsapp{
+	background:#25D366
+}
+/* RESET */
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box
+}
+html{
+	scroll-behavior:smooth
+}
+body{
+	font-family:'Poppins', Arial, sans-serif;
+	color:var(--text);
+	background:var(--cream);
+	line-height:1.6
+}
+img{
+	max-width:100%;
+	display:block
+}
+a{
+	text-decoration:none;
+	color:inherit
+}
+/* =========================HEADER========================= */
+header{
+	width:100%;
+	background:var(--cream);
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:15px 8%;
+	position:sticky;
+	top:0;
+	z-index:1000;
+	box-shadow:0 3px 10px rgba(0,0,0,0.08)
+}
+.logo-area{
+	display:flex;
+	align-items:center;
+	gap:12px
+}
+.logo-area img{
+	width:60px;
+	height:60px;
+	object-fit:contain
+}
+.logo-area h2{
+	color:var(--primary);
+	font-size:24px
+}
+nav{
+	display:flex;
+	gap:25px
+}
+nav a{
+	font-weight:600;
+	color:var(--text);
+	transition:.3s
+}
+nav a:hover{
+	color:var(--primary)
+}
+.menu-icon{
+	display:none;
+	font-size:30px;
+	cursor:pointer
+}
+/* =========================HERO========================= */
+.hero{
+	height:80vh;
+	background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../images/hero.jpg");
+	background-size:cover;
+	background-position:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	color:white
+}
+.hero-content{
+	max-width:800px;
+	padding:20px
+}
+.hero h1{
+	font-size:55px;
+	margin-bottom:20px
+}
+.hero p{
+	font-size:22px;
+	margin-bottom:30px
+}
+button{
+	background:var(--cream);
+	color:white;
+	border:none;
+	padding:14px 30px;
+	border-radius:30px;
+	cursor:pointer;
+	font-size:16px;
+	transition:.3s
+}
+button:hover{
+	background:var(--black);
+	transform:translateY(-3px)
+}
+.second-btn{
+	background:#ffc107;
+	color:var(--text)
+}
+/* =========================SECTIONS========================= */
+section{
+
+position:relative;
+
+padding:90px 8%;
+
+background:transparent;
+
+overflow:hidden;
+
+}
+section::before{
+
+content:"";
+
+position:absolute;
+
+right:-120px;
+
+top:-120px;
+
+width:280px;
+
+height:280px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(200,154,103,.08),
+
+transparent 70%);
+
+pointer-events:none;
+
+}
+section h2{
+	text-align:center;
+	font-size:35px;
+	margin-bottom:30px;
+	color:var(--primary)
+}
+/* =========================CARDS========================= */
+.cards,.product-grid,.services-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px
+}
+.product-card,.service-card{
+	background:white;
+	padding:20px;
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.08);
+
+border:1px solid rgba(200,154,103,.15);
+	transition:.3s
+}
+.product-card:hover,.service-card:hover{
+	transform:translateY(-8px)
+}
+.product-card img{
+	height:220px;
+	width:100%;
+	object-fit:cover;
+	border-radius:10px
+}
+.product-card h3{
+	color:var(--primary);
+	margin:15px 0
+}
+/* =========================ABOUT========================= */
+.about-container{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:50px;
+	align-items:center
+}
+.about-text{
+	color:var(--text)
+}
+.about-text p{
+	margin-bottom:20px
+}
+/* =========================WHY US========================= */
+.why-us{
+	background:var(--cream);
+	text-align:center
+}
+.why-us p{
+	font-size:18px
+}
+/* =========================GALLERY========================= */
+.gallery-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:20px
+}
+.gallery-grid img{
+	height:250px;
+	width:100%;
+	object-fit:cover;
+	border-radius:15px;
+	transition:.3s
+}
+.gallery-grid img:hover{
+	transform:scale(1.05)
+}
+/* =========================FOOTER========================= */
+footer{
+	background:var(--black);
+	color:white;
+	padding:30px 8%;
+	text-align:center
+}
+footer h3{
+	margin-bottom:15px
+}
+.social-icons{
+	margin-top:20px
+}
+.social-icons a{
+	font-size:25px;
+	margin:10px
+}
+/* =========================WHATSAPP FLOAT========================= */
+.floating-whatsapp{
+	position:fixed;
+	right:25px;
+	bottom:25px;
+	width:65px;
+	height:65px;
+	background:#25D366;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:white;
+	font-size:32px;
+	box-shadow:0 5px 15px rgba(0,0,0,.3);
+	z-index:999
+}
+.gallery-img{
+	cursor:pointer;
+	transition:0.3s
+}
+.gallery-img:hover{
+	transform:scale(1.05)
+}
+.lightbox{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.9);
+	z-index:99999;
+	align-items:center;
+	justify-content:center
+}
+.lightbox img{
+	max-width:90%;
+	max-height:90%
+}
+.close{
+	position:absolute;
+	top:20px;
+	right:40px;
+	font-size:50px;
+	color:white;
+	cursor:pointer
+}
+/* HOME STATS */
+.stats{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:25px;
+	padding:60px 8%;
+	background:var(--cream);
+	text-align:center
+}
+.stat{
+	background:white;
+	padding:35px;
+	border-radius:18px;
+	box-shadow:0 10px 25px rgba(0,0,0,.08);
+	transition:.3s
+}
+.stat:hover{
+	transform:translateY(-8px)
+}
+.stat h2{
+	color:var(--primary);
+	font-size:42px
+}
+.stat p{
+	margin-top:10px;
+	font-weight:600
+}
+/*==================================================HERO SLIDER==================================================*/
+.hero-slider{
+	position:relative;
+	width:100%;
+	height:75vh;
+	min-height:600px;
+	overflow:hidden;
+	background:#000
+}
+.slide{
+	position:absolute;
+	inset:0;
+	opacity:0;
+	visibility:hidden;
+	transition:opacity .8s ease-in-out
+}
+.slide.active{
+	opacity:1;
+	visibility:visible;
+	z-index:2
+}
+.slide img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transform:scale(1);
+	transition:transform 8s linear
+}
+.slide.active img{
+	transform:scale(1.08)
+}
+.overlay{
+	position:absolute;
+	inset:0;
+	background:linear-gradient(90deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.45) 35%,rgba(0,0,0,.20) 65%,rgba(0,0,0,.30) 100%)
+}
+.hero-content{
+	position:absolute;
+	top:50%;
+	left:11%;
+	transform:translateY(-50%);
+	max-width:650px;
+	color:#fff;
+	z-index:10;
+	animation:heroFade .8s ease
+}
+.hero-content h1,.hero-content h2{
+	font-size:68px;
+	line-height:1.1;
+	font-weight:800;
+	margin-bottom:25px
+}
+.hero-content span{
+	display:block;
+	margin-top:12px;
+	color:var(--gold);
+	font-size:74px;
+	font-family:cursive;
+	font-weight:400
+}
+.hero-content p{
+	font-size:23px;
+	line-height:1.7;
+	max-width:620px;
+	margin-bottom:40px;
+	color:#f5f5f5
+}
+/*==================================================BUTTONS==================================================*/
+.hero-buttons{
+	display:flex;
+	gap:20px;
+	flex-wrap:wrap
+}
+.btn{
+	display:inline-flex;
+	align-items:center;
+	gap:12px;
+	padding:18px 36px;
+	border-radius:60px;
+	text-decoration:none;
+	font-size:18px;
+	font-weight:700;
+	transition:.35s
+}
+.btn i{
+	font-size:18px
+}
+.btn-primary{
+	background:var(--cream);
+	color:#fff
+}
+.btn-primary:hover{
+	background:var(--primary-dark);
+	transform:translateY(-4px)
+}
+.btn-outline{
+	border:2px solid #fff;
+	color:#fff;
+	background:transparent
+}
+.btn-outline:hover{
+	background:#fff;
+	color:#1d5d27;
+	transform:translateY(-4px)
+}
+/*==================================================ARROWS==================================================*/
+.slider-btn{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	width:62px;
+	height:62px;
+	border:none;
+	border-radius:50%;
+	background:rgba(0,0,0,.45);
+	color:#fff;
+	cursor:pointer;
+	z-index:50;
+	transition:.3s;
+	font-size:22px
+}
+.slider-btn:hover{
+	background:var(--cream)
+}
+.prev{
+	left:30px
+}
+.next{
+	right:30px
+}
+/*==================================================DOTS==================================================*/
+.slider-dots{
+	position:absolute;
+	left:50%;
+	bottom:28px;
+	transform:translateX(-50%);
+	display:flex;
+	gap:14px;
+	z-index:40
+}
+.dot{
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	background:rgba(255,255,255,.55);
+	cursor:pointer;
+	transition:.35s
+}
+.dot.active{
+	width:38px;
+	border-radius:20px;
+	background:var(--gold)
+}
+.dot:hover{
+	background:#fff
+}
+/*==================================================ANIMATION==================================================*/
+@keyframes heroFade{
+	from{
+	opacity:0;
+	transform:translateY(-40%)
+	}
+	to{
+	opacity:1;
+	transform:translateY(-50%)
+	}
+}
+/*==================================================HERO STATS SECTION==================================================*/
+.hero-stats{
+	width:90%;
+	max-width:1300px;
+	margin:-70px auto 80px;
+	background:#ffffff;
+	border-radius:18px;
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:25px;
+	padding:35px;
+	position:relative;
+	z-index:100;
+	box-shadow:0 20px 50px rgba(0,0,0,.12)
+}
+.stat-box{
+	display:flex;
+	align-items:center;
+	gap:20px;
+	padding:18px;
+	border-radius:12px;
+	transition:.35s
+}
+.stat-box:hover{
+	background:#f7f7f7;
+	transform:translateY(-8px)
+}
+.stat-box .icon{
+	width:70px;
+	height:70px;
+	background:var(--cream);
+	color:#fff;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+	font-size:28px;
+	flex-shrink:0
+}
+.stat-box h2{
+	font-size:34px;
+	color:var(--primary);
+	margin-bottom:5px;
+	font-weight:700
+}
+.stat-box h4{
+	font-size:18px;
+	color:var(--heading);
+	margin-bottom:6px
+}
+.stat-box p{
+	color:#666;
+	font-size:15px;
+	line-height:1.5
+}
+/*==================================================RESPONSIVE DESIGN==================================================*/
+
+
+
+
+/*==================================================SMOOTH TRANSITIONS==================================================*/
+.hero-slider,.slide,.slide img,.hero-content,.hero-buttons,.slider-btn,.dot,.hero-stats,.stat-box{
+	transition:all .35s ease
+}
+/*==================================================ABOUT PREVIEW==================================================*/
+.about-preview{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	align-items:center
+}
+.about-image img{
+	width:100%;
+	border-radius:18px;
+	display:block;
+	box-shadow:0 20px 45px rgba(0,0,0,.15)
+}
+.section-tag{
+	display:inline-block;
+	padding:8px 18px;
+	background:#EFE4D7;
+	color:var(--primary);
+	border-radius:30px;
+	font-size:14px;
+	font-weight:700;
+	letter-spacing:1px;
+	margin-bottom:20px
+}
+.about-text h2{
+	font-size:42px;
+	color:var(--heading);
+	margin-bottom:25px;
+	line-height:1.3
+}
+.about-text p{
+	color:#666;
+	font-size:17px;
+	line-height:1.9;
+	margin-bottom:20px
+}
+.about-features{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:18px;
+	margin:35px 0
+}
+.feature{
+	display:flex;
+	align-items:center;
+	gap:14px;
+	font-weight:600
+}
+.feature i{
+	width:46px;
+	height:46px;
+	background:var(--cream);
+	color:#fff;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+.about-btn{
+	display:inline-flex;
+	align-items:center;
+	gap:12px;
+	background:var(--cream);
+	color:#fff;
+	text-decoration:none;
+	padding:16px 30px;
+	border-radius:50px;
+	font-weight:700;
+	transition:.3s
+}
+.about-btn:hover{
+	background:var(--primary-dark);
+	transform:translateY(-3px)
+}
+
+/*==================================================SERVICES SECTION==================================================*/
+.services-section{
+	width:90%;
+	max-width:1300px;
+	margin:60px auto
+}
+.section-title{
+	text-align:center;
+	max-width:700px;
+	margin:0 auto 60px
+}
+.section-title span{
+	display:inline-block;
+	background:#EFE4D7;
+	color:var(--primary);
+	padding:8px 18px;
+	border-radius:30px;
+	font-size:14px;
+	font-weight:700;
+	letter-spacing:1px;
+	margin-bottom:18px
+}
+.section-title h2{
+	font-size:42px;
+	color:var(--heading);
+	margin-bottom:18px
+}
+.section-title p{
+	font-size:18px;
+	color:#666;
+	line-height:1.8
+}
+.services-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+	gap:30px
+}
+.service-box{
+	background:#fff;
+	border-radius:18px;
+	padding:40px 30px;
+	box-shadow:0 15px 40px rgba(0,0,0,.08);
+	transition:.35s
+}
+.service-box:hover{
+	transform:translateY(-10px);
+	box-shadow:0 25px 50px rgba(0,0,0,.12)
+}
+.service-icon{
+	width:75px;
+	height:75px;
+	background:var(--cream);
+	color:#fff;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:18px;
+	font-size:30px;
+	margin-bottom:25px
+}
+.service-box h3{
+	font-size:24px;
+	margin-bottom:18px;
+	color:var(--heading)
+}
+.service-box p{
+	color:#666;
+	line-height:1.8;
+	margin-bottom:25px
+}
+.service-box a{
+	text-decoration:none;
+	color:var(--primary);
+	font-weight:700;
+	display:inline-flex;
+	align-items:center;
+	gap:10px
+}
+.service-box a:hover{
+	gap:15px
+}
+/*==================================================PRODUCTS SECTION==================================================*/
+.products-section{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto
+}
+.products-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+	gap:30px
+}
+.product-box{
+	background:#fff;
+	border-radius:18px;
+	overflow:hidden;
+	box-shadow:0 15px 40px rgba(0,0,0,.08);
+	transition:.35s
+}
+.product-box:hover{
+	transform:translateY(-10px);
+	box-shadow:0 25px 50px rgba(0,0,0,.12)
+}
+.product-image{
+	overflow:hidden
+}
+.product-image img{
+	width:100%;
+	height:240px;
+	object-fit:cover;
+	display:block;
+	transition:.5s
+}
+.product-box:hover img{
+	transform:scale(1.08)
+}
+.product-content{
+	padding:28px
+}
+.product-content h3{
+	font-size:24px;
+	color:var(--heading);
+	margin-bottom:15px
+}
+.product-content p{
+	color:#666;
+	line-height:1.8;
+	margin-bottom:25px
+}
+.product-content a{
+	color:var(--primary);
+	text-decoration:none;
+	font-weight:700;
+	display:inline-flex;
+	align-items:center;
+	gap:10px;
+	transition:.3s
+}
+.product-content a:hover{
+	gap:15px
+}
+.products-button{
+	text-align:center;
+	margin-top:60px
+}
+.main-btn{
+	display:inline-block;
+	background:var(--cream);
+	color:#fff;
+	text-decoration:none;
+	padding:18px 40px;
+	border-radius:50px;
+	font-size:17px;
+	font-weight:700;
+	transition:.3s
+}
+.main-btn:hover{
+	background:var(--primary-dark);
+	transform:translateY(-4px)
+}
+/*==================================================WHY CHOOSE US==================================================*/
+.why-section{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	align-items:center
+}
+.why-image img{
+	width:100%;
+	border-radius:18px;
+	display:block;
+	box-shadow:0 20px 45px rgba(0,0,0,.15)
+}
+.why-content h2{
+	font-size:42px;
+	color:var(--heading);
+	margin:20px 0;
+	line-height:1.3
+}
+.why-content p{
+	color:#666;
+	line-height:1.9;
+	font-size:17px
+}
+.why-features{
+	margin-top:40px;
+	display:grid;
+	gap:28px
+}
+.why-item{
+	display:flex;
+	align-items:flex-start;
+	gap:22px
+}
+.why-icon{
+	width:65px;
+	height:65px;
+	background:var(--cream);
+	color:#fff;
+	border-radius:16px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:24px;
+	flex-shrink:0
+}
+.why-item h3{
+	margin-bottom:8px;
+	color:var(--heading);
+	font-size:22px
+}
+.why-item p{
+	margin:0
+}
+
+
+/*==================================================CTA SECTION==================================================*/
+.cta-section{
+	position:relative;
+	width:92%;
+	max-width:1300px;
+	height:360px;
+	margin:70px auto;
+	border-radius:22px;
+	overflow:hidden;
+	background:url("../images/cta-bg.jpg") center center/cover no-repeat
+}
+.cta-overlay{
+	position:absolute;
+	inset:0;
+	background:rgba(0,0,0,.60)
+}
+.cta-content{
+	position:relative;
+	z-index:2;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	color:#fff;
+	padding:40px
+}
+.cta-content span{
+	display:inline-block;
+	padding:8px 20px;
+	background:rgba(255,255,255,.15);
+	border-radius:30px;
+	margin-bottom:20px;
+	font-size:14px;
+	letter-spacing:1px;
+	font-weight:700
+}
+.cta-content h2{
+	font-size:48px;
+	margin-bottom:25px;
+	line-height:1.3
+}
+.cta-content p{
+	max-width:700px;
+	font-size:18px;
+	line-height:1.8;
+	margin-bottom:40px
+}
+.cta-buttons{
+	display:flex;
+	gap:20px;
+	flex-wrap:wrap
+}
+.cta-btn{
+	background:var(--primary);
+	color:#fff;
+	text-decoration:none;
+	padding:18px 38px;
+	border-radius:50px;
+	font-weight:700;
+	transition:.3s
+}
+.cta-btn:hover{
+	background:var(--primary-dark);
+	transform:translateY(-4px)
+}
+.cta-btn-outline{
+	border:2px solid #fff;
+	color:#fff;
+	text-decoration:none;
+	padding:18px 38px;
+	border-radius:50px;
+	font-weight:700;
+	transition:.3s
+}
+.cta-btn-outline:hover{
+	background:#fff;
+	color:var(--primary)
+}
+
+/*=========================SERVICE SLIDER=========================*/
+.service-slider{
+	position:relative;
+	height:60vh;
+	overflow:hidden
+}
+.service-slide{
+	position:absolute;
+	width:100%;
+	height:100%;
+	opacity:0;
+	transition:opacity 1s ease
+}
+.service-slide.active{
+	opacity:1;
+	z-index:2
+}
+.service-slide{
+	transform:scale(1.08);
+	transition:opacity 1s ease, transform 6s linear
+}
+.service-slide.active{
+	opacity:1;
+	transform:scale(1)
+}
+.service-slide img{
+	width:100%;
+	height:100%;
+	object-fit:cover
+}
+.service-overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.45)
+}
+.service-content{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color:white;
+	text-align:center;
+	width:90%;
+	max-width:800px;
+	z-index:5
+}
+.service-content h1{
+	font-size:55px;
+	margin-bottom:20px
+}
+.service-content p{
+	font-size:22px;
+	line-height:1.8
+}
+.service-prev,.service-next{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	width:55px;
+	height:55px;
+	border:none;
+	border-radius:50%;
+	background:rgba(255,255,255,.2);
+	color:white;
+	font-size:22px;
+	cursor:pointer;
+	z-index:20;
+	backdrop-filter:blur(6px)
+}
+.service-prev{
+	left:30px
+}
+.service-next{
+	right:30px
+}
+.service-prev:hover,.service-next:hover{
+	background:var(--cream)
+}
+.service-dots{
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	text-align:center;
+	z-index:20
+}
+.service-dot{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	background:white;
+	margin:0 5px;
+	cursor:pointer;
+	opacity:.5
+}
+.service-dot.active{
+	opacity:1;
+	background:var(--cream)
+}
+/*=========================================MKANGA-ULIMI STATISTICS=========================================*/
+.hero-stats{
+	width:95%;
+	max-width:1400px;
+	margin:40px auto;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+	gap:25px;
+	align-items:start
+}
+.stat-badge{
+	display:flex;
+	justify-content:center;
+	align-items:center
+}
+.badge{
+	width:220px;
+	min-height:260px;
+	background:#fff;
+	border-radius:35px;
+	border:3px solid #c89a67;
+	box-shadow:0 15px 35px rgba(0,0,0,.08);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:flex-start;
+	padding:25px 20px;
+	transition:.35s ease
+}
+.badge:hover{
+	transform:translateY(-10px);
+	box-shadow:0 25px 50px rgba(0,0,0,.15)
+}
+.badge-icon{
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	border:2px solid #c89a67;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:32px;
+	color:#c89a67;
+	margin-bottom:18px
+}
+.badge-number{
+	font-size:56px;
+	font-weight:700;
+	color:#222;
+	line-height:1;
+	margin-bottom:15px
+}
+.badge-divider{
+	width:70px;
+	height:3px;
+	background:#c89a67;
+	border-radius:20px;
+	margin-bottom:18px
+}
+.badge-title{
+	font-size:18px;
+	font-weight:600;
+	text-align:center;
+	color:#333;
+	line-height:1.5
+}
+
+
+/*=========================================MKANGA-ULIMI PREMIUM DROPDOWN=========================================*/
+.dropdown{
+	position:relative;
+	display:flex;
+	align-items:center
+}
+.dropbtn{
+	display:flex;
+	align-items:center;
+	gap:8px;
+	color:#6e6c6c;
+	text-decoration:none;
+	font-weight:600;
+	transition:.3s
+}
+.dropbtn i{
+	font-size:12px;
+	transition:.3s
+}
+.dropdown:hover .dropbtn i{
+	transform:rotate(180deg)
+}
+.dropdown-content{
+	position:absolute;
+	top:140%;
+	left:50%;
+	transform:translateX(-50%) translateY(15px);
+	width:280px;
+	background:#fff;
+	border-radius:18px;
+	padding:12px;
+	box-shadow:0 25px 60px rgba(0,0,0,.15);
+	opacity:0;
+	visibility:hidden;
+	transition:.35s ease;
+	z-index:9999
+}
+.dropdown:hover .dropdown-content{
+	opacity:1;
+	visibility:visible;
+	transform:translateX(-50%) translateY(0)
+}
+.dropdown-content a{
+	display:flex;
+	align-items:center;
+	gap:14px;
+	padding:15px 18px;
+	border-radius:12px;
+	color:#333;
+	font-weight:500;
+	transition:.3s
+}
+.dropdown-content a:hover{
+	background:#f6efe6;
+	color:#b37b39;
+	transform:translateX(8px)
+}
+/*==================================================LIVESTOCK PAGE==================================================*/
+/*==================================================
+                LIVESTOCK PAGE
+==================================================*/
+
+/* HERO */
+
+.livestock-hero{
+    min-height:65vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("../images/livestock-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.livestock-hero-content{
+    max-width:800px;
+    color:#FFFFFF;
+}
+
+.livestock-hero-content .small-title{
+    color:#D6A566;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.livestock-hero-content h1{
+    font-size:clamp(42px,6vw,75px);
+    color:#FFFFFF;
+    margin-bottom:20px;
+}
+
+.livestock-hero-content p{
+    font-size:20px;
+    line-height:1.8;
+    color:#F8F6F2;
+}
+
+
+/*==================================================
+                INTRODUCTION
+==================================================*/
+
+.livestock-intro{
+    width:92%;
+    max-width:900px;
+    margin:70px auto;
+    text-align:center;
+}
+
+.section-label{
+    color:#D6A566;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.livestock-intro h2{
+    font-size:42px;
+    color:#111111;
+    margin-bottom:20px;
+}
+
+.livestock-intro p{
+    color:#555555;
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+/*==================================================
+                ENTERPRISES
+==================================================*/
+
+.livestock-enterprises{
+    width:92%;
+    max-width:1300px;
+    margin:70px auto;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+    font-size:42px;
+    color:#111111;
+}
+
+
+/*==================================================
+                GRID
+==================================================*/
+
+.livestock-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+
+/*==================================================
+                CARD
+==================================================*/
+
+.livestock-card{
+    background:#FFFFFF;
+    border:1px solid #E8DED1;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s ease;
+}
+
+.livestock-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+
+/*==================================================
+                IMAGE
+==================================================*/
+
+.livestock-card-image{
+    height:260px;
+    overflow:hidden;
+}
+
+.livestock-card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.45s ease;
+}
+
+.livestock-card:hover .livestock-card-image img{
+    transform:scale(1.08);
+}
+
+
+/*==================================================
+                CONTENT
+==================================================*/
+
+.livestock-card-content{
+    padding:28px;
+}
+
+.livestock-card-content h3{
+    font-size:26px;
+    color:#111111;
+    margin-bottom:15px;
+}
+
+.livestock-card-content p{
+    color:#666666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+
+/*==================================================
+                BUTTON
+==================================================*/
+
+.livestock-card-content a{
+    display:inline-block;
+    padding:12px 26px;
+    background:#111111;
+    color:#FFFFFF;
+    border:2px solid #D6A566;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.livestock-card-content a:hover{
+    background:#D6A566;
+    color:#111111;
+}
+
+
+/*==================================================
+                CTA
+==================================================*/
+
+.livestock-cta{
+    margin-top:80px;
+    padding:70px 20px;
+    text-align:center;
+    background:#F2ECE5;
+    border-top:1px solid #E8DED1;
+}
+
+.livestock-cta h2{
+    font-size:42px;
+    color:#111111;
+    margin-bottom:20px;
+}
+
+.livestock-cta p{
+    color:#555555;
+    max-width:700px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+.livestock-cta a{
+    display:inline-block;
+    padding:16px 35px;
+    background:#111111;
+    color:#FFFFFF;
+    border:2px solid #D6A566;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.livestock-cta a:hover{
+    background:#D6A566;
+    color:#111111;
+}
+
+
+/*==================================================
+                GLOBAL FIXES
+==================================================*/
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media (max-width:992px){
+
+    .livestock-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .livestock-hero{
+        min-height:55vh;
+    }
+
+    .livestock-hero-content h1{
+        font-size:48px;
+    }
+
+    .livestock-intro h2,
+    .section-heading h2,
+    .livestock-cta h2{
+        font-size:34px;
+    }
+
+    .livestock-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .livestock-hero-content h1{
+        font-size:36px;
+    }
+
+    .livestock-card-image{
+        height:220px;
+    }
+
+    .livestock-card-content{
+        padding:22px;
+    }
+
+}
+
+/*==================================================POULTRY PAGE==================================================*/
+/* HERO */
+.poultry-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../images/poultry-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.poultry-hero-content{
+	max-width:800px;
+	color:#fff
+}
+.poultry-hero-content .small-title{
+	letter-spacing:3px;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom:15px
+}
+.poultry-hero-content h1{
+	font-size:clamp(40px,6vw,75px);
+	margin-bottom:20px
+}
+.poultry-hero-content > p:last-child{
+	font-size:20px;
+	line-height:1.7
+}
+/* INTRODUCTION */
+.poultry-intro{
+	width:90%;
+	max-width:850px;
+	margin:60px auto;
+	text-align:center
+}
+.poultry-intro h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.poultry-intro p:last-child{
+	color:#666;
+	font-size:17px;
+	line-height:1.8
+}
+/* ENTERPRISES */
+.poultry-enterprises{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto
+}
+/* GRID */
+.poultry-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px
+}
+/* CARD */
+.poultry-card{
+	background:#fff;
+	border-radius:18px;
+	overflow:hidden;
+	box-shadow:0 12px 35px rgba(0,0,0,.08);
+	transition:.35s ease
+}
+.poultry-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 20px 45px rgba(0,0,0,.14)
+}
+/* IMAGE */
+.poultry-card-image{
+	height:280px;
+	overflow:hidden
+}
+.poultry-card-image img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:.5s ease
+}
+.poultry-card:hover img{
+	transform:scale(1.08)
+}
+/* CARD CONTENT */
+.poultry-card-content{
+	padding:25px
+}
+.poultry-card-content h3{
+	font-size:27px;
+	color:#222;
+	margin-bottom:10px
+}
+.poultry-card-content p{
+	color:#666;
+	line-height:1.6
+}
+/* CTA */
+.poultry-cta{
+	margin-top:100px;
+	padding:55px 20px;
+	text-align:center;
+	background:#F8F6F2
+}
+.poultry-cta h2{
+	font-size:40px;
+	color:#222;
+	margin-bottom:15px
+}
+.poultry-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.poultry-cta a{
+	display:inline-block;
+	padding:14px 32px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:30px;
+	font-weight:600;
+	transition:.3s
+}
+.poultry-cta a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/*==================================================HORTICULTURE PAGE==================================================*/
+/* HERO */
+.horticulture-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../images/horticulture-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.horticulture-hero-content{
+	max-width:800px;
+	color:#fff
+}
+.horticulture-hero-content .small-title{
+	letter-spacing:3px;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom:15px
+}
+.horticulture-hero-content h1{
+	font-size:clamp(40px,6vw,75px);
+	margin-bottom:20px
+}
+.horticulture-hero-content > p:last-child{
+	font-size:20px;
+	line-height:1.7
+}
+/* INTRODUCTION */
+.horticulture-intro{
+	width:90%;
+	max-width:850px;
+	margin:60px auto;
+	text-align:center
+}
+.horticulture-intro h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.horticulture-intro p:last-child{
+	color:#666;
+	font-size:17px;
+	line-height:1.8
+}
+/* ENTERPRISES */
+.horticulture-enterprises{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto
+}
+/* GRID */
+.horticulture-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px
+}
+/* CARD */
+.horticulture-card{
+	background:#fff;
+	border-radius:18px;
+	overflow:hidden;
+	box-shadow:0 12px 35px rgba(0,0,0,.08);
+	transition:.35s ease
+}
+.horticulture-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 20px 45px rgba(0,0,0,.14)
+}
+/* IMAGE */
+.horticulture-card-image{
+	height:280px;
+	overflow:hidden
+}
+.horticulture-card-image img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:.5s ease
+}
+.horticulture-card:hover img{
+	transform:scale(1.08)
+}
+/* CARD CONTENT */
+.horticulture-card-content{
+	padding:25px
+}
+.horticulture-card-content h3{
+	font-size:27px;
+	color:#222;
+	margin-bottom:10px
+}
+.horticulture-card-content p{
+	color:#666;
+	line-height:1.6
+}
+/* CTA */
+.horticulture-cta{
+	margin-top:100px;
+	padding:55px 20px;
+	text-align:center;
+	background:#F8F6F2
+}
+.horticulture-cta h2{
+	font-size:40px;
+	color:#222;
+	margin-bottom:15px
+}
+.horticulture-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.horticulture-cta a{
+	display:inline-block;
+	padding:14px 32px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:30px;
+	font-weight:600;
+	transition:.3s
+}
+.horticulture-cta a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/*==================================================APICULTURE PAGE==================================================*/
+.apiculture-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../images/apiculture-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.apiculture-hero-content{
+	max-width:800px;
+	color:#fff
+}
+.apiculture-hero-content .small-title{
+	letter-spacing:3px;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom:15px
+}
+.apiculture-hero-content h1{
+	font-size:clamp(40px,6vw,75px);
+	margin-bottom:20px
+}
+.apiculture-hero-content > p:last-child{
+	font-size:20px;
+	line-height:1.7
+}
+/* INTRODUCTION */
+.apiculture-intro{
+	width:90%;
+	max-width:850px;
+	margin:60px auto;
+	text-align:center
+}
+.apiculture-intro h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.apiculture-intro p:last-child{
+	color:#666;
+	font-size:17px;
+	line-height:1.8
+}
+/* ENTERPRISES */
+.apiculture-enterprises{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto
+}
+/* GRID */
+.apiculture-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px
+}
+/* CARD */
+.apiculture-card{
+	background:#fff;
+	border-radius:18px;
+	overflow:hidden;
+	box-shadow:0 12px 35px rgba(0,0,0,.08);
+	transition:.35s ease
+}
+.apiculture-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 20px 45px rgba(0,0,0,.14)
+}
+/* IMAGE */
+.apiculture-card-image{
+	height:280px;
+	overflow:hidden
+}
+.apiculture-card-image img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:.5s ease
+}
+.apiculture-card:hover img{
+	transform:scale(1.08)
+}
+/* CARD CONTENT */
+.apiculture-card-content{
+	padding:25px
+}
+.apiculture-card-content h3{
+	font-size:27px;
+	color:#222;
+	margin-bottom:10px
+}
+.apiculture-card-content p{
+	color:#666;
+	line-height:1.6
+}
+/* CTA */
+.apiculture-cta{
+	margin-top:100px;
+	padding:55px 20px;
+	text-align:center;
+	background:#F8F6F2
+}
+.apiculture-cta h2{
+	font-size:40px;
+	color:#222;
+	margin-bottom:15px
+}
+.apiculture-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.apiculture-cta a{
+	display:inline-block;
+	padding:14px 32px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:30px;
+	font-weight:600;
+	transition:.3s
+}
+.apiculture-cta a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/*==================================================ADVISORY SERVICES PAGE==================================================*/
+.advisory-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../images/advisory-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.advisory-hero-content{
+	max-width:800px;
+	color:#fff
+}
+.advisory-hero-content .small-title{
+	letter-spacing:3px;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom:15px
+}
+.advisory-hero-content h1{
+	font-size:clamp(40px,6vw,75px);
+	margin-bottom:20px
+}
+.advisory-hero-content > p:last-child{
+	font-size:20px;
+	line-height:1.7
+}
+/* INTRODUCTION */
+.advisory-intro{
+	width:90%;
+	max-width:850px;
+	margin:60px auto;
+	text-align:center
+}
+.advisory-intro h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.advisory-intro p:last-child{
+	color:#666;
+	font-size:17px;
+	line-height:1.8
+}
+/* SERVICES */
+.advisory-services{
+	width:92%;
+	max-width:1300px;
+	margin:60px auto
+}
+/* GRID */
+.advisory-grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:25px
+}
+/* CARD */
+.advisory-card{
+	padding:35px 25px;
+	background:#fff;
+	border-radius:18px;
+	text-align:center;
+	box-shadow:0 12px 35px rgba(0,0,0,.08);
+	transition:.35s ease
+}
+.advisory-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 20px 45px rgba(0,0,0,.14)
+}
+/* ICON */
+.advisory-icon{
+	width:75px;
+	height:75px;
+	margin:0 auto 25px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+	background:#F8F6F2;
+	color:#C89A67;
+	font-size:30px
+}
+/* CONTENT */
+.advisory-card-content h3{
+	font-size:22px;
+	color:#222;
+	margin-bottom:15px
+}
+.advisory-card-content p{
+	color:#666;
+	line-height:1.6
+}
+/* CTA */
+.advisory-cta{
+	margin-top:100px;
+	padding:55px 20px;
+	text-align:center;
+	background:#F8F6F2
+}
+.advisory-cta h2{
+	font-size:40px;
+	color:#222;
+	margin-bottom:15px
+}
+.advisory-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.advisory-cta a{
+	display:inline-block;
+	padding:14px 32px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:30px;
+	font-weight:600;
+	transition:.3s
+}
+.advisory-cta a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/*==================================================GALLERY PAGE==================================================*/
+/* HERO */
+.gallery-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../images/gallery-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.gallery-hero-content{
+	max-width:800px;
+	color:#fff
+}
+.gallery-hero-content .small-title{
+	letter-spacing:4px;
+	text-transform:uppercase;
+	font-size:14px;
+	margin-bottom:15px;
+	color:#C89A67
+}
+.gallery-hero-content h1{
+	font-size:clamp(45px,6vw,75px);
+	margin-bottom:20px
+}
+.gallery-hero-content p{
+	font-size:20px;
+	line-height:1.8
+}
+/* GALLERY SECTION */
+.gallery-section{
+	width:92%;
+	max-width:1400px;
+	margin:60px auto
+}
+.gallery-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+	gap:25px
+}
+/* IMAGES */
+.gallery-grid img{
+	width:100%;
+	height:280px;
+	object-fit:cover;
+	border-radius:18px;
+	cursor:pointer;
+	transition:.4s;
+	box-shadow:0 10px 30px rgba(0,0,0,.08)
+}
+.gallery-grid img:hover{
+	transform:translateY(-8px) scale(1.02);
+	box-shadow:0 20px 40px rgba(0,0,0,.15)
+}
+/* LIGHTBOX */
+.lightbox{
+	position:fixed;
+	inset:0;
+	background:rgba(0,0,0,.9);
+	display:none;
+	justify-content:center;
+	align-items:center;
+	z-index:99999
+}
+.lightbox img{
+	width:90%;
+	max-width:1000px;
+	max-height:90vh;
+	object-fit:contain
+}
+.close{
+	position:absolute;
+	top:25px;
+	right:40px;
+	color:#fff;
+	font-size:45px;
+	cursor:pointer
+}
+/* CLOSING SECTION */
+.gallery-closing{
+	background:#F8F6F2;
+	padding:55px 20px;
+	text-align:center
+}
+.gallery-closing h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.gallery-closing p{
+	max-width:700px;
+	margin:auto;
+	color:#666;
+	line-height:1.8;
+	margin-bottom:35px
+}
+.gallery-closing a{
+	display:inline-block;
+	padding:15px 35px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:40px;
+	transition:.3s;
+	font-weight:600
+}
+.gallery-closing a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+/*==================================================CONTACT PAGE==================================================*/
+/* HERO */
+.contact-hero{
+	min-height:60vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../images/contact-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.contact-hero-content{
+	color:#fff
+}
+.contact-hero-content .small-title{
+	letter-spacing:4px;
+	color:#C89A67;
+	font-size:14px;
+	margin-bottom:15px
+}
+.contact-hero-content h1{
+	font-size:clamp(45px,6vw,75px);
+	margin-bottom:20px
+}
+.contact-hero-content p{
+	font-size:20px
+}
+/* CONTACT SECTION */
+.contact-section{
+	width:92%;
+	max-width:1200px;
+	margin:60px auto
+}
+.contact-heading{
+	text-align:center;
+	max-width:750px;
+	margin:0 auto 60px
+}
+.contact-heading h2{
+	font-size:42px;
+	margin-bottom:20px
+}
+.contact-heading > p:last-child{
+	color:#666;
+	line-height:1.8
+}
+/* CONTACT CARDS */
+.contact-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px
+}
+.contact-card{
+	text-align:center;
+	padding:40px 25px;
+	background:#fff;
+	border-radius:18px;
+	box-shadow:0 12px 35px rgba(0,0,0,.08)
+}
+.contact-icon{
+	width:70px;
+	height:70px;
+	margin:0 auto 20px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+	background:#F8F6F2;
+	color:#C89A67;
+	font-size:28px
+}
+.contact-card h3{
+	font-size:23px;
+	margin-bottom:12px
+}
+.contact-card p{
+	color:#666;
+	margin-bottom:20px
+}
+.contact-card a{
+	color:#2E7D32;
+	font-weight:600
+}
+/* FORM SECTION */
+.contact-form-section{
+	background:#F8F6F2;
+	padding:60px 20px
+}
+.contact-form-container{
+	max-width:1100px;
+	margin:auto;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	align-items:center
+}
+.contact-form-text h2{
+	font-size:40px;
+	margin-bottom:20px
+}
+.contact-form-text p:last-child{
+	color:#666;
+	line-height:1.8
+}
+/* FORM */
+.contact-form{
+	display:flex;
+	flex-direction:column;
+	gap:18px
+}
+.contact-form input,.contact-form textarea{
+	width:100%;
+	padding:16px 18px;
+	border:1px solid #ddd;
+	border-radius:8px;
+	font-family:inherit;
+	font-size:15px;
+	outline:none
+}
+.contact-form input:focus,.contact-form textarea:focus{
+	border-color:#C89A67
+}
+.contact-form button{
+	border:none;
+	padding:16px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:30px;
+	font-size:16px;
+	font-weight:600;
+	cursor:pointer;
+	transition:.3s
+}
+.contact-form button:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/*==================================================MARKETPAGE==================================================*/
+.market-hero{
+	min-height:60vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../images/market-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.market-hero-content{
+	color:#fff
+}
+.market-hero-content .small-title{
+	color:#C89A67;
+	letter-spacing:4px;
+	font-size:14px;
+	margin-bottom:15px
+}
+.market-hero-content h1{
+	font-size:clamp(45px,6vw,75px);
+	margin-bottom:20px
+}
+.market-hero-content p{
+	font-size:20px
+}
+/* ORDER SECTION */
+.market-section{
+	width:92%;
+	max-width:1200px;
+	margin:60px auto
+}
+.market-heading{
+	text-align:center;
+	max-width:750px;
+	margin:0 auto 60px
+}
+.market-heading h2{
+	font-size:42px;
+	margin-bottom:20px
+}
+.market-heading p:last-child{
+	color:#666;
+	line-height:1.8
+}
+/*==================================================
+            CATEGORY FILTER BUTTONS
+==================================================*/
+
+.category-filters{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:40px 0;
+}
+
+.category-btn{
+
+    padding:14px 30px;
+
+    background:#FFFFFF;
+
+    color:#111111;
+
+    border:2px solid #D6A566;
+
+    border-radius:40px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.category-btn:hover{
+
+    background:#D6A566;
+
+    color:#111111;
+
+    border-color:#111111;
+
+    transform:translateY(-3px);
+
+}
+
+.category-btn.active{
+
+    background:#111111;
+
+    color:#FFFFFF;
+
+    border-color:#D6A566;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.category-btn:focus{
+
+    outline:none;
+
+    box-shadow:0 0 0 4px rgba(214,165,102,.25);
+
+}
+.product-search{
+
+    width:100%;
+    max-width:500px;
+    margin:0 auto 35px;
+
+}
+
+.product-search input{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border:2px solid #D6A566;
+
+    border-radius:40px;
+
+    background:#FFFFFF;
+
+    color:#111111;
+
+    font-size:16px;
+
+}
+
+.product-search input:focus{
+
+    outline:none;
+
+    border-color:#111111;
+
+}
+/* market GRID */
+.market-grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:25px
+}
+/* market CARD */
+.market-card{
+	padding:35px 25px;
+	text-align:center;
+	background:#fff;
+	border-radius:18px;
+	box-shadow:0 12px 35px rgba(0,0,0,.08);
+	transition:.35s ease
+}
+.market-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 20px 45px rgba(0,0,0,.14)
+}
+.market-card i{
+	font-size:42px;
+	color:#C89A67;
+	margin-bottom:20px
+}
+.market-card h3{
+	font-size:23px;
+	color:#222;
+	margin-bottom:12px
+}
+.market-card p{
+	color:#666;
+	line-height:1.6
+}
+/* CTA */
+.market-cta{
+	padding:55px 20px;
+	text-align:center;
+	background:#F8F6F2
+}
+.market-cta h2{
+	font-size:40px;
+	margin-bottom:15px
+}
+.market-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.market-cta a{
+	display:inline-block;
+	padding:16px 30px;
+	background:#2E7D32;
+	color:#fff;
+	border-radius:35px;
+	font-weight:600;
+	transition:.3s
+}
+.market-cta a:hover{
+	background:#C89A67
+}
+
+/* RESPONSIVE */
+
+
+/*==================================================ABOUT PAGE==================================================*/
+/* HERO */
+.about-hero{
+	min-height:65vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding:50px 20px;
+	background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../images/about-banner.jpg");
+	background-size:cover;
+	background-position:center
+}
+.about-hero-content{
+	max-width:850px;
+	color:#fff
+}
+.about-hero-content .small-title{
+	color:#C89A67;
+	letter-spacing:4px;
+	font-size:14px;
+	margin-bottom:15px
+}
+.about-hero-content h1{
+	font-size:clamp(45px,6vw,75px);
+	margin-bottom:20px
+}
+.about-hero-content p{
+	font-size:20px;
+	line-height:1.7
+}
+/* STORY */
+.about-story{
+	width:92%;
+	max-width:1200px;
+	margin:65px auto;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	align-items:center
+}
+.about-story-image img{
+	width:100%;
+	height:500px;
+	object-fit:cover;
+	border-radius:20px
+}
+.about-story-content h2{
+	font-size:42px;
+	line-height:1.2;
+	margin-bottom:25px;
+	color:#222
+}
+.about-story-content p:not(.section-label){
+	color:#666;
+	line-height:1.8;
+	margin-bottom:18px
+}
+/* VISION AND MISSION */
+.about-purpose{
+	width:92%;
+	max-width:1200px;
+	margin:60px auto;
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:30px
+}
+.about-purpose-card{
+	padding:50px 40px;
+	text-align:center;
+	background:#F8F6F2;
+	border:1px solid #E5DED3;
+	border-radius:20px
+}
+.about-purpose-icon{
+	width:75px;
+	height:75px;
+	margin:0 auto 25px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+	border:2px solid #C89A67;
+	color:#C89A67;
+	font-size:28px
+}
+.about-purpose-card h2{
+	color:#222;
+	margin-bottom:20px
+}
+.about-purpose-card p:last-child{
+	color:#666;
+	line-height:1.8
+}
+/* VALUES */
+.values-section{
+	width:92%;
+	max-width:1200px;
+	margin:65px auto
+}
+.values-grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:25px
+}
+.value-card{
+	padding:35px 25px;
+	text-align:center;
+	border:1px solid #E5DED3;
+	border-radius:18px;
+	background:#fff;
+	transition:.35s ease
+}
+.value-card:hover{
+	transform:translateY(-8px);
+	box-shadow:0 18px 40px rgba(0,0,0,.10)
+}
+.value-icon{
+	font-size:35px;
+	color:#C89A67;
+	margin-bottom:20px
+}
+.value-card h3{
+	color:#222;
+	margin-bottom:15px
+}
+.value-card p{
+	color:#666;
+	line-height:1.7
+}
+/* FOUNDER */
+.founder-section{
+	background:#F8F6F2;
+	padding:60px 8%;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	align-items:center
+}
+.founder-image img{
+	width:100%;
+	height:auto;
+	display:block;
+	object-fit:contain;
+	border-radius:20px
+}
+.founder-content h2{
+	font-size:42px;
+	margin-bottom:25px
+}
+.founder-content p:not(.section-label){
+	color:#666;
+	line-height:1.8;
+	margin-bottom:18px
+}
+/* CTA */
+.about-cta{
+	text-align:center;
+	padding:60px 20px
+}
+.about-cta h2{
+	font-size:42px;
+	color:#222;
+	margin-bottom:20px
+}
+.about-cta p{
+	color:#666;
+	margin-bottom:30px
+}
+.about-cta a{
+	display:inline-block;
+	padding:15px 35px;
+	background:#222;
+	color:#fff;
+	border-radius:30px;
+	font-weight:600;
+	transition:.3s
+}
+.about-cta a:hover{
+	background:#C89A67
+}
+/* RESPONSIVE */
+
+
+/* REMOVE HORIZONTAL SCROLL */
+html,body{
+	width:100%;
+	overflow-x:hidden;
+	margin:0;
+	padding:0
+}
+/* KEEP ALL SECTIONS INSIDE VIEWPORT */
+section,header,footer,.hero-slider,.hero-stats,.about-preview,.services-section,.products-section,.why-section,.cta-section{
+	width:100%;
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:hidden
+}
+/* FIX GRIDS */
+.cards,.product-grid,.services-grid,.gallery-grid,.hero-stats{
+	width:100%;
+	box-sizing:border-box
+}
+/* PREVENT IMAGES FROM CAUSING OVERFLOW */
+img{
+	max-width:100%;
+	height:auto;
+	display:block
+}
+/* REMOVE ANY ELEMENT WIDER THAN SCREEN */
+*{
+	box-sizing:border-box
+}
+/*==================================================SAFE GLOBAL WHITESPACE FIX(Keeps Products Dropdown Working)==================================================*/
+/* Prevent horizontal scrolling */
+html,body{
+	width:100%;
+	margin:0;
+	padding:0;
+	overflow-x:hidden
+}
+/* Better box sizing */
+*,*::before,*::after{
+	box-sizing:border-box
+}
+/* Responsive media */
+img,video,iframe{
+	display:block;
+	max-width:100%;
+	height:auto
+}
+/* Never allow page containers to become wider than the screen */
+section,main,footer{
+	width:100%;
+	max-width:100%
+}
+/* IMPORTANTHeader must allow dropdowns to overflow */
+header{
+	width:100%;
+	overflow:visible;
+	position:sticky;
+	top:0;
+	z-index:10000
+}
+/* Navigation */
+nav{
+	overflow:visible
+}
+/* Dropdown */
+.dropdown{
+	position:relative
+}
+.dropdown-content{
+	position:absolute;
+	top:100%;
+	left:50%;
+	transform:translateX(-50%);
+	z-index:99999;
+	overflow:visible
+}
+/* Prevent grids from overflowing */
+.cards,.product-grid,.products-grid,.services-grid,.gallery-grid,.contact-grid,.market-grid,.values-grid,.hero-stats,.livestock-grid,.poultry-grid,.horticulture-grid,.apiculture-grid,.advisory-grid{
+	width:100%;
+	max-width:100%
+}
+/* Responsive tables */
+table{
+	width:100%;
+	max-width:100%
+}
+/* Long text */
+p,h1,h2,h3,h4,h5,h6{
+	overflow-wrap:break-word
+}
+/* Slider images */
+.hero-slider img,.service-slider img{
+	width:100%;
+	height:100%;
+	object-fit:cover
+}
+/* Prevent accidental overflow from fixed elements */
+.floating-whatsapp{
+	right:20px;
+	bottom:20px
+}
+/*==================================================DROPDOWN PAGES - HORIZONTAL WHITESPACE FIX==================================================*/
+/* Main Containers */
+.livestock-intro,.livestock-enterprises,.poultry-intro,.poultry-enterprises,.horticulture-intro,.horticulture-enterprises,.apiculture-intro,.apiculture-enterprises,.advisory-intro,.advisory-services{
+	width:100%;
+	max-width:1300px;
+	margin:60px auto;
+	padding:0 20px;
+	box-sizing:border-box
+}
+/* Intro Sections */
+.livestock-intro,.poultry-intro,.horticulture-intro,.apiculture-intro,.advisory-intro{
+	max-width:900px
+}
+/* Enterprise Grids */
+.livestock-grid,.poultry-grid,.horticulture-grid,.apiculture-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+	gap:30px;
+	width:100%
+}
+/* Advisory Grid */
+.advisory-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+	gap:25px;
+	width:100%
+}
+/* Cards */
+.livestock-card,.poultry-card,.horticulture-card,.apiculture-card,.advisory-card{
+	width:100%;
+	overflow:hidden
+}
+/* Images */
+.livestock-card img,.poultry-card img,.horticulture-card img,.apiculture-card img{
+	width:100%;
+	height:100%;
+	display:block;
+	object-fit:cover
+}
+/* Prevent Any Overflow */
+.livestock-enterprises *,.poultry-enterprises *,.horticulture-enterprises *,.apiculture-enterprises *,.advisory-services *{
+	max-width:100%
+}
+/* Mobile */
+
+/*==================================================FOOTER==================================================*/
+.footer{
+	background:#111111;
+	color:#ffffff;
+	padding:85px 8% 35px;
+	margin-top:80px
+}
+.footer-container{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+	gap:50px;
+	align-items:flex-start
+}
+.footer-column h3{
+	font-size:28px;
+	margin-bottom:20px;
+	color:var(--primary)
+}
+.footer-column h4{
+	font-size:20px;
+	margin-bottom:20px;
+	color:var(--primary);
+	position:relative
+}
+.footer-column h4::after{
+	width:60px;
+	margin-top:10px;
+	margin-left:0
+}
+.footer-logo{
+	width:130px;
+	margin:0 auto 20px;
+	display:block
+}
+.footer-column p{
+	color:#d6d6d6;
+	line-height:1.8;
+	margin-bottom:15px
+}
+.footer-column ul{
+	list-style:none;
+	padding:0;
+	margin:0
+}
+.footer-column ul li{
+	margin-bottom:12px
+}
+.footer-column ul li a{
+	color:#d6d6d6;
+	text-decoration:none;
+	transition:.3s
+}
+.footer-column ul li a{
+	display:inline-block;
+	transition:.35s ease
+}
+.footer-column ul li a:hover{
+	color:var(--primary);
+	transform:translateX(6px)
+}
+.footer-column i{
+	color:var(--primary);
+	width:22px;
+	text-align:center;
+	margin-right:12px;
+	font-size:16px
+}
+.footer-social{
+	display:flex;
+	gap:15px;
+	margin-top:20px
+}
+.footer-social a{
+	width:42px;
+	height:42px;
+	border:2px solid rgba(255,255,255,.15);
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#ffffff;
+	text-decoration:none;
+	transition:.35s ease
+}
+.footer-social a:hover{
+	background:var(--primary);
+	border-color:var(--primary);
+	color:#111111;
+	transform:translateY(-6px) scale(1.05)
+}
+.footer-bottom{
+	margin-top:50px;
+	padding-top:25px;
+	border-top:1px solid rgba(255,255,255,.12);
+	text-align:center;
+	opacity:.8
+}
+.footer-bottom p{
+	color:#bdbdbd;
+	font-size:15px;
+	margin:0
+}
+/* ==========================================FINAL FOOTER GAP FIX========================================== */
+footer{
+	margin-top:0 !important
+}
+section:last-of-type{
+	margin-bottom:0 !important;
+	padding-bottom:40px
+}
+/* ==========================================GLOBAL WHITE SPACE CONTROLMKANGA ULIMI FINAL CLEANUP========================================== */
+/* Remove accidental horizontal overflow */
+html,body{
+	overflow-x:hidden
+}
+/* Remove default browser spacing */
+body{
+	margin:0
+}
+/* Control all main sections */
+section{
+	margin-bottom:0
+}
+/* Remove empty bottom spaces */
+section:last-child,main > section:last-child{
+	margin-bottom:0 !important
+}
+/* Prevent oversized empty areas */
+.container{
+	max-width:1200px
+}
+/* Clean common spacing problems */
+.hero,.about-section,.products-section,.services-section,.why-section,.cta-section,.contact-section,.order-section{
+	margin-bottom:0
+}
+/* Remove accidental large padding */
+.hero + section,section + section{
+	margin-top:0
+}
+/* ==========================================MKANGA ULIMI FINAL GLOBAL CLEANUPVERSION 1.0========================================== */
+/* Remove horizontal scrolling */
+html,body{
+	overflow-x:hidden
+}
+/* Remove browser default gaps */
+body{
+	margin:0
+}
+/* Keep sections consistent */
+section{
+	position:relative
+}
+/* Remove unwanted empty spaces */
+section:last-child{
+	margin-bottom:0 !important
+}
+/* Prevent accidental large bottom gaps */
+footer{
+	margin-top:0 !important
+}
+/* Standard spacing for all pages */
+.about-section,.products-section,.services-section,.why-section,.cta-section,.contact-section,.order-section,.gallery-section{
+	margin-bottom:0
+}
+
+/*==================================================
+        LIVESTOCK ENTERPRISE SECTIONS
+==================================================*/
+
+.livestock-enterprise{
+    width:92%;
+    max-width:1300px;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.livestock-enterprise.reverse .livestock-enterprise-image{
+    order:2;
+}
+
+.livestock-enterprise.reverse .livestock-enterprise-content{
+    order:1;
+}
+
+
+/* IMAGE */
+
+.livestock-enterprise-image{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.livestock-enterprise-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+    transition:.45s ease;
+}
+
+.livestock-enterprise:hover img{
+    transform:scale(1.05);
+}
+
+
+/* CONTENT */
+
+.livestock-enterprise-content h2{
+    font-size:42px;
+    color:#111111;
+    margin-bottom:20px;
+}
+
+.livestock-enterprise-content h3{
+    font-size:24px;
+    color:#111111;
+    margin:30px 0 15px;
+}
+
+.livestock-enterprise-content p{
+    color:#555555;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.livestock-enterprise-content ul{
+    margin:20px 0 35px;
+    padding-left:22px;
+}
+
+.livestock-enterprise-content li{
+    margin-bottom:12px;
+    color:#555555;
+}
+
+
+/* BUTTON */
+
+.btn-primary{
+    display:inline-block;
+    padding:15px 34px;
+    background:#111111;
+    color:#FFFFFF;
+    text-decoration:none;
+    border:2px solid #D6A566;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.btn-primary:hover{
+    background:#D6A566;
+    color:#111111;
+}
+
+
+/*==================================================
+        MOBILE
+==================================================*/
+
+@media(max-width:992px){
+
+    .livestock-enterprise{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .livestock-enterprise.reverse .livestock-enterprise-image,
+    .livestock-enterprise.reverse .livestock-enterprise-content{
+        order:unset;
+    }
+
+    .livestock-enterprise-image img{
+        height:380px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .livestock-enterprise{
+        width:94%;
+    }
+
+    .livestock-enterprise-content h2{
+        font-size:34px;
+    }
+
+    .livestock-enterprise-image img{
+        height:300px;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   MKANGA-ULIMI — GLOBAL FOOTER & SOCIAL ICON FIX
+   Consistent footer across all pages
+   ========================================================= */
+
+.site-footer{
+  width:100%;
+  background:var(--black, #111111);
+  color:#f5f1e8;
+  padding:64px 6% 0;
+  margin-top:0 !important;
+  position:relative;
+  overflow:hidden;
+}
+
+.site-footer .footer-container{
+  width:100%;
+  max-width:1250px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:48px;
+  align-items:start;
+}
+
+.site-footer .footer-column{
+  min-width:0;
+}
+
+.site-footer .footer-brand{
+  max-width:390px;
+}
+
+.site-footer .footer-logo{
+  width:82px;
+  height:82px;
+  object-fit:contain;
+  display:block;
+  margin-bottom:16px;
+  border-radius:50%;
+}
+
+.site-footer h3{
+  color:var(--farm-gold, #D6A566) !important;
+  font-size:24px;
+  margin:0 0 12px;
+  font-weight:700;
+}
+
+.site-footer h4{
+  color:var(--farm-gold, #D6A566) !important;
+  font-size:17px;
+  margin:0 0 20px;
+  font-weight:700;
+}
+
+.site-footer p{
+  color:#d8d4ca;
+  line-height:1.7;
+  margin:0 0 12px;
+}
+
+.site-footer .footer-description{
+  font-size:14px;
+  color:#aaa69d;
+  max-width:360px;
+}
+
+.site-footer .footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.site-footer .footer-links li{
+  margin:0 0 11px;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-contact a{
+  color:#d8d4ca !important;
+  text-decoration:none;
+  transition:color .25s ease, transform .25s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact a:hover{
+  color:var(--farm-gold, #D6A566) !important;
+}
+
+.site-footer .footer-contact p{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+  word-break:break-word;
+}
+
+.site-footer .footer-contact p i{
+  color:var(--farm-gold, #D6A566);
+  width:20px;
+  flex:0 0 20px;
+  text-align:center;
+}
+
+.site-footer .social-icons{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.site-footer .social-icons a{
+  width:42px;
+  height:42px;
+  margin:0 !important;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(214,165,102,.55);
+  border-radius:50%;
+  background:rgba(255,255,255,.04);
+  color:var(--farm-gold, #D6A566) !important;
+  font-size:18px !important;
+  line-height:1;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+
+.site-footer .social-icons a i{
+  color:inherit !important;
+  font-size:inherit;
+}
+
+.site-footer .social-icons a:hover,
+.site-footer .social-icons a:focus-visible{
+  background:var(--farm-gold, #D6A566);
+  border-color:var(--farm-gold, #D6A566);
+  color:var(--black, #111111) !important;
+  transform:translateY(-3px);
+  outline:none;
+}
+
+.site-footer .footer-bottom{
+  width:100%;
+  max-width:1250px;
+  margin:48px auto 0;
+  padding:22px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+  text-align:center;
+}
+
+.site-footer .footer-bottom p{
+  margin:0;
+  color:#99958c;
+  font-size:13px;
+}
+
+@media (max-width:992px){
+  .site-footer .footer-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:38px 32px;
+  }
+  .site-footer .footer-brand{
+    max-width:none;
+  }
+}
+
+@media (max-width:600px){
+  .site-footer{
+    padding:48px 7% 0;
+  }
+  .site-footer .footer-container{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+  .site-footer .footer-logo{
+    width:72px;
+    height:72px;
+  }
+  .site-footer .social-icons{
+    margin-top:18px;
+  }
+}
+
+/* ==================================================
+   CLIENT FEEDBACK — AUGUST 2026
+   ================================================== */
+/* Remove the faint background watermark requested by the client. */
+body::before{display:none !important;}
+
+/* Keep the page clean and reduce oversized whitespace between major sections. */
+.about-preview,
+.products-section,
+.why-section{margin-top:45px;margin-bottom:45px;}
+
+/* About image/text columns share the same visual height and bottom alignment. */
+.about-preview{align-items:stretch;}
+.about-image{height:100%;}
+.about-image img{height:100%;object-fit:cover;}
+.about-text{display:flex;flex-direction:column;justify-content:space-between;}
+
+/* Client requested OUR PRODUCTS only, aligned to the left. */
+.products-heading{text-align:left;max-width:none;margin:0 0 28px;}
+.products-heading span{margin-bottom:0;}
+
+/* Equal-height product cards keep all category cards aligned. */
+.products-grid{align-items:stretch;}
+.product-box{height:100%;display:flex;flex-direction:column;}
+.product-content{display:flex;flex-direction:column;flex:1;}
+.product-content a{margin-top:auto;}
+
+/* Improve visibility of the Why-section icons. */
+.why-icon{background:var(--gold) !important;color:#111 !important;border:1px solid rgba(17,17,17,.12);box-shadow:0 8px 18px rgba(0,0,0,.10);}
+.why-content h2{margin-top:0;}
+
+/* Harmonize hero typography and make the client-requested messages prominent. */
+.hero-content h1,.hero-content h2{font-family:'Cormorant Garamond',serif;color:#fff;font-weight:700;letter-spacing:.2px;text-shadow:0 3px 16px rgba(0,0,0,.35);}
+.hero-content p{color:#fff;}
+.hero-content span{font-family:'Cormorant Garamond',serif;}
+
+@media (min-width:901px){
+  .hero-content h1,.hero-content h2{font-size:64px;line-height:1.08;}
+}
+
+@media (max-width:900px){
+  .about-preview{align-items:stretch;}
+  .about-image img{height:auto;min-height:300px;}
+  .about-text{gap:16px;}
+  .products-heading{text-align:left;}
+}
+
+@media (max-width:600px){
+  .hero-content h1,.hero-content h2{font-size:40px;line-height:1.12;}
+  .hero-content p{font-size:18px;line-height:1.5;}
+}
+
+/* Legacy variable aliases retained so the existing header/buttons/navigation
+   use the same gold / white / black palette consistently. */
+:root{
+    --text:#2D2D2D;
+    --heading:#111111;
+    --dark-green:#111111;
+    --dark-text:#2D2D2D;
+    --farm-gold:#D6A566;
+    --farm-green:#111111;
+    --soft-gold:#D6A566;
+    --primary-dark:#2D2D2D;
+    --black:#111111;
+}
+
+
+/* ==================================================
+   AUGUST 2026 CLIENT FEEDBACK — FINAL POLISH
+   ================================================== */
+
+/* Keep both CTA buttons equal in size and slightly higher inside the banner. */
+.cta-content{
+  transform:translateY(-10px);
+}
+
+.cta-buttons{
+  align-items:center;
+  justify-content:center;
+}
+
+.cta-buttons .cta-btn,
+.cta-buttons .cta-btn-outline{
+  min-width:190px;
+  min-height:58px;
+  padding:16px 28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* Keep the new Advisory Services card visually consistent with the other cards. */
+.products-grid .product-box .product-image img{
+  object-position:center;
+}
+
+@media (max-width:700px){
+  .cta-content{
+    transform:translateY(-4px);
+    padding:28px 20px;
+  }
+
+  .cta-content h2{
+    font-size:34px;
+    margin-bottom:16px;
+  }
+
+  .cta-content p{
+    font-size:15px;
+    margin-bottom:24px;
+  }
+
+  .cta-buttons{
+    gap:12px;
+  }
+
+  .cta-buttons .cta-btn,
+  .cta-buttons .cta-btn-outline{
+    width:100%;
+    min-width:0;
+    min-height:54px;
+  }
+}
